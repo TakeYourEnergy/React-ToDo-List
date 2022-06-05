@@ -26,7 +26,7 @@ const FormReact = ({ addHandler }) => {
                <Form.Control onChange={inputHandler} value={input} type="text" placeholder="Text here..." />
             </Form.Group>
             <Button variant="primary" type="submit" className='mx-3'>
-               Submit
+               Новая задача
             </Button>
          </Form>
       </>
