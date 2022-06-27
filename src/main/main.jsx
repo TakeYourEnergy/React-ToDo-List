@@ -1,12 +1,11 @@
-import styles from './main.module.css'
 import TodosList from '../todos-list/TodosList'
 
-const Main = ({ todos, changeStatusHandler, deleteTodo }) => {
+const Main = () => {
    return (
       <>
          <hr />
          <main>
-            <TodosList todos={todos} changeStatusHandler={changeStatusHandler} deleteTodo={deleteTodo}/>
+            <TodosList />
          </main>
       </>
 

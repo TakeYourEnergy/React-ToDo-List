@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
-const FormReact = ({ addHandler }) => {
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/actions/todosActionsCreators";
+
+
+const FormReact = () => {
+   const dispatch = useDispatch()
 
    const [input, setInput] = useState('')
 
@@ -13,10 +18,9 @@ const FormReact = ({ addHandler }) => {
    const submitHandler = (e) => {
       e.preventDefault()
       if (input.trim()) {
-         addHandler(input.trim())
+         dispatch(addTodo(input.trim()))
          setInput('')
       }
-
    }
 
    return (
